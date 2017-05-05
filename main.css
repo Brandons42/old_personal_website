@@ -1,0 +1,29 @@
+body {
+  background-color: #ECF0D7;
+}
+#home img {
+  height: 250px;
+}
+nav {
+  background-color: #AEB5A1;
+}
+nav img {
+  margin: -30% 0 0 20%;
+  height: 250%;
+}
+img {
+  height: 250px;
+}
+#home h1 {
+  font-size: 50px;
+}
+#home h1 > span {
+  text-decoration: underline overline;
+  font-family: 'Teko', sans-serif;
+}
+.body-text {
+
+}
+.section-title {
+
+}
