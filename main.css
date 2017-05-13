@@ -1,25 +1,61 @@
+/* extra small */
 body {
-  background-color: #ECF0D7;
+  max-width: 100%;
+  overflow-x: hidden;
+  background-color: #1e2749;
+  color: #fafaff;
 }
-#home img {
-  height: 250px;
+#nav {
+  background-color: #fafaff;
+  border: none;
+  color: #1e2749;
 }
-nav {
-  background-color: #AEB5A1;
+h2 {
+  font-family: 'Lobster', cursive;
+  font-size: 150px;
+}
+h4 {
+  font-family: 'Teko', sans-serif;
+  font-size: 75px;
+}
+p {
+  font-family: 'Raleway', sans-serif;
+}
+.card {
+  width: 90%;
+  margin: auto;
+  background-color: #fafaff;
+  color: #1e2749;
+  border-radius: 5px;
+  box-shadow: 5px 5px 25px #30343f;
 }
 nav img {
   margin: -30% 0 0 20%;
   height: 250%;
 }
-img {
-  height: 250px;
+#home > section {
+  height: 100vh;
+  width: 100%;
+  background-image: url("images/background.jpg");
+  background-size: cover;
 }
-#home h1 {
-  font-size: 50px;
+#home > section > section {
+  padding-top: 5%;
 }
-#home h1 > span {
-  text-decoration: underline overline;
+#home > section > section > section > h1 {
+  font-size: 75px;
+  vertical-align: middle;
+  font-family: 'Satisfy', cursive;
+}
+#home > section > section > p {
   font-family: 'Teko', sans-serif;
+  font-size: 40px;
+}
+#home img {
+  height: 200px;
+}
+.logo {
+  height: 100px;
 }
 .body-text {
 
@@ -27,3 +63,9 @@ img {
 .section-title {
 
 }
+/*small*/
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+}
+/*medium*/
+/*large*/
