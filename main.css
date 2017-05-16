@@ -1,18 +1,36 @@
 /* extra small */
-body {
+html, body {
   max-width: 100%;
   overflow-x: hidden;
+}
+.normal {
+  background-color: #fafaff;
+  color: #1e2749;
+}
+#nav a {
+  border-radius: 0;
+  color: #1e2749;
+  font-size: 15px;
+}
+.inverted, #nav a:hover {
   background-color: #1e2749;
   color: #fafaff;
 }
 #nav {
-  background-color: #fafaff;
   border: none;
-  color: #1e2749;
+  overflow: hidden;
+  font-family: 'Raleway', sans-serif;
 }
+#nav li {
+  padding-left: 20px;
+}
+
 h2 {
   font-family: 'Lobster', cursive;
   font-size: 150px;
+}
+h3 {
+  font-family: 'Lobster Two', cursive;
 }
 h4 {
   font-family: 'Teko', sans-serif;
@@ -24,35 +42,49 @@ p {
 .card {
   width: 90%;
   margin: auto;
-  background-color: #fafaff;
-  color: #1e2749;
   border-radius: 5px;
   box-shadow: 5px 5px 25px #30343f;
+  padding: 10px;
 }
 nav img {
-  margin: -30% 0 0 20%;
-  height: 250%;
+  margin: -35% 0 0 20%;
+  height: 500%;
 }
 #home > section {
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   background-image: url("images/background.jpg");
   background-size: cover;
 }
 #home > section > section {
   padding-top: 5%;
+  height: 100%;
 }
-#home > section > section > section > h1 {
-  font-size: 75px;
+#home > section > section > div {
+  height: 90%;
+}
+#home > section > section > div > section > h1 {
+  font-size: 100px;
   vertical-align: middle;
   font-family: 'Satisfy', cursive;
 }
-#home > section > section > p {
+#home > section > section > div > p {
   font-family: 'Teko', sans-serif;
   font-size: 40px;
 }
 #home img {
   height: 200px;
+}
+#phone {
+  background-color: black;
+  border-radius: 5px;
+}
+#home a {
+  position: relative;
+  left: calc(50% - 25px);
+  width: 20%;
+  font-size: 50px;
+  color: #fafaff;
 }
 .logo {
   height: 100px;

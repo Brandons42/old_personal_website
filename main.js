@@ -13,7 +13,7 @@ $(document).ready(function() {
 		$(this).find(".card").each(function() {
 			arr.push($(this).height());
 		});
-		max = Math.max.apply(null, arr);
+		max = 20 + Math.max.apply(null, arr);
 		$(this).find(".card").css("height", max + "px");
 	});
 });
