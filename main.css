@@ -2,17 +2,19 @@
 html, body {
   max-width: 100%;
   overflow-x: hidden;
+  position: relative;
 }
 .normal {
   background-color: #fafaff;
   color: #1e2749;
 }
-#nav a {
+#nav-content a {
   border-radius: 0;
-  color: #1e2749;
   font-size: 15px;
+  -webkit-transition: background-color 1s, color 1s;
+          transition: background-color 1s, color 1s;
 }
-.inverted, #nav a:hover {
+.inverted, #nav-content a:hover {
   background-color: #1e2749;
   color: #fafaff;
 }
@@ -47,7 +49,7 @@ p {
   padding: 10px;
 }
 nav img {
-  margin: -35% 0 0 20%;
+  margin: -35% 20% 0 20%;
   height: 500%;
 }
 #home > section {
@@ -79,12 +81,33 @@ nav img {
   background-color: black;
   border-radius: 5px;
 }
+@keyframes bounce {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -50px;
+  }
+  100% {
+    top: 0;
+  }
+}
 #home a {
   position: relative;
   left: calc(50% - 25px);
   width: 20%;
   font-size: 50px;
   color: #fafaff;
+  animation-name: bounce;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  -webkit-transition: font-size 1s, color 1s, left 1s;
+          transition: font-size 1s, color 1s, left 1s;
+}
+#home a:hover {
+  font-size: 80px;
+  color: #1e2749;
+  left: calc(50% - 40px);
 }
 .logo {
   height: 100px;
