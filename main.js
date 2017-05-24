@@ -16,4 +16,15 @@ $(document).ready(function() {
 		max = 20 + Math.max.apply(null, arr);
 		$(this).find(".card").css("height", max + "px");
 	});
+	var id;
+	var target;
+	$("#nav a").click(function(){
+		id = $(this).attr("href");
+		console.log(id);
+		console.log($(id).scrollTop());
+		$("html, body").animate(
+			{
+				scrollTop: $(id).scrollTop()
+			}, 2000);
+	});
 });

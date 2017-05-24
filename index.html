@@ -11,9 +11,98 @@
     <link href="hamburgers-master/dist/hamburgers.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css?family=Lobster|Lobster+Two|Raleway:300|Satisfy|Teko" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="main.css"/>
+    <style>
+      html, body {
+        max-width: 100%;
+        overflow-x: hidden;
+        position: relative;
+      }
+      .normal {
+        background-color: #fefeff;
+        color: #1e2749;
+      }
+      #home div {
+        color: #fefeff;
+      }
+      #nav-content a {
+        border-radius: 0;
+        -webkit-transition: background-color 1s, color 1s;
+                transition: background-color 1s, color 1s;
+      }
+      .inverted, #nav-content a:hover {
+        background-color: #1e2749;
+        color: #fafaff;
+      }
+      #nav {
+        border: none;
+        overflow: hidden;
+        font-family: 'Raleway', sans-serif;
+      }
+      h2 {
+        font-family: 'Lobster', cursive;
+      }
+      h3 {
+        font-family: 'Lobster Two', cursive;
+      }
+      h4 {
+        font-family: 'Teko', sans-serif;
+      }
+      p {
+        font-family: 'Raleway', sans-serif;
+      }
+      #home > section {
+        height: 100vh;
+        width: 100vw;
+        background-image: url("images/background.jpg");
+        background-size: cover;
+      }
+      .card {
+        box-sizing: border-box;
+        border-radius: 5px;
+        box-shadow: 5px 5px 25px #30343f;
+        margin: auto;
+      }
+      #nav img {
+        border: none;
+        -webkit-transition: border 1s;
+                transition: border 1s;
+      }
+      #home div {
+        margin-left: 5%;
+      }
+      #home h1 {
+        display: inline;
+        font-family: 'Satisfy', cursive;
+      }
+      #home img {
+        display: inline-block;
+      }
+      #home p {
+        font-family: 'Teko', sans-serif;
+      }
+      #home a {
+        position: relative;
+        color: #fefeff;
+        animation-name: bounce;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        -webkit-transition: font-size 1s, color 1s, left 1s;
+                transition: font-size 1s, color 1s, left 1s;
+      }
+      #home a:hover {
+        color: #1e2749;
+      }
+      #phone {
+        background-color: black;
+        border-radius: 5px;
+      }
+    </style>
+    <link rel="stylesheet" type="text/css" href="css/xs.css" media="screen and (max-width: 767px)" />
+    <link rel="stylesheet" type="text/css" href="css/sm.css" media="screen and (min-width: 768px) and (max-width: 991px)" />
+    <link rel="stylesheet" type="text/css" href="css/md.css" media="screen and (min-width: 992px) and (max-width: 1199px)" />
+    <link rel="stylesheet" type="text/css" href="css/lg.css" media="screen and (min-width: 1200px)" />
   </head>
-  <body class="inverted" data-spy="scroll" data-target="#nav-content">
+  <body class="normal" data-spy="scroll" data-target="#nav-content">
     <nav id="nav" class="navbar navbar-fixed-top navbar-right normal">
         <button class="hamburger hamburger--collapse navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#nav-content" aria-expanded="false">
           <span class="hamburger-box">
@@ -55,14 +144,10 @@
         <section class="col-xs-12">
           <section class="col-xs-8 col-xs-offset-2">
             <div>
-              <section class="col-xs-8">
-                <h1 class="text-right">
-                  Brandon Suen
-                </h1>
-              </section>
-              <section class="col-xs-4">
-                <img alt="Image of Brandon Suen" src="images/basketball.jpg" class="img-circle" />
-              </section>
+              <h1>
+                Brandon Suen
+              </h1>
+              <img alt="Image of Brandon Suen" src="images/basketball.jpg" class="img-circle" />
               <p class="text-center">
                 Web Developer | Web Designer | Computer Programmer
               </p>
@@ -79,17 +164,11 @@
             <h2>
               My Skillset
             </h2>
-          </section>
-        </section>
-        <section class="row">
-          <section class="col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
-            <h3>
-              Languages
-            </h3>
+            <br />
           </section>
         </section>
         <section class="row clearfix sameheight">
-          <section id="html" class="col-md-3 col-sm-4 col-xs-6">
+          <section id="html" class="col-sm-4 col-xs-6">
             <section class="card normal">
               <h4 class="text-center">
                 HTML
@@ -103,7 +182,7 @@
               </p>
             </section>
           </section>
-          <section id="css" class="col-md-3 col-sm-4 col-xs-6">
+          <section id="css" class="col-sm-4 col-xs-6">
             <section class="card normal">
               <h4 class="text-center">
                 CSS
@@ -173,7 +252,7 @@
               </ul>
             </section>
           </section>
-          <section id="js" class="col-md-3 col-sm-4 col-xs-6">
+          <section id="js" class="col-sm-4 col-xs-6">
             <section class="card normal">
               <h4 class="text-center">
                 Javascript
@@ -187,7 +266,7 @@
               </p>
             </section>
           </section>
-          <section id="jquery" class="col-md-3 col-sm-4 col-xs-6">
+          <section id="jquery" class="col-sm-4 col-xs-6">
             <section class="card normal responsive">
               <h4 class="text-center">
                 Jquery
@@ -202,41 +281,38 @@
             </section>
           </section>
         </section>
-        <section class="row">
-          <section class="col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
-            <h3>
-              Other Skills/ Tools I Use
-            </h3>
-          </section>
-        </section>
         <section class="row clearfix sameheight">
-          <section id="rwd" class="col-md-3 col-sm-4 col-xs-6">
-            <h4 class="text-center">
-              Responsive Web Design
-            </h4>
-            <div id="phone" class="hidden-xs">
-              <iframe src="https://brandons42.github.io/personal_website/"></iframe>
-            </div>
-            <img alt="A desktop computer, tablet, and smartphone" src="images/rwd.png" class="center-block visible-xs-block logo" />
-            <p>
-              <a href="" target="_blank">
-                Responsive web design
-              </a>
-              is a method of making your website look good on all devices.
-            </p>
-          </section>
-          <section class="col-md-9 col-sm-8 col-xs-6">
-            <section id="git" class="col-xs-12 responsive">
+          <section id="rwd" class="col-sm-4 col-xs-6">
+            <section class="card normal">
               <h4 class="text-center">
-                Git
+                Responsive Web Design
               </h4>
-              <img alt="The Git logo" src="images/git.png" class="center-block" />
+              <div id="phone" class="hidden-xs">
+                <iframe src="https://brandons42.github.io/personal_website/"></iframe>
+              </div>
+              <img alt="A desktop computer, tablet, and smartphone" src="images/rwd.png" class="center-block visible-xs-block logo" />
               <p>
                 <a href="" target="_blank">
-                  Git
+                  Responsive web design
                 </a>
-                is a version control system used to save changes, discount changes, and much more.
+                is a method of making your website look good on all devices.
               </p>
+            </section>
+          </section>
+          <section class="col-sm-8 col-xs-6">
+            <section id="git" class="col-xs-12">
+              <section class="card normal responsive">
+                <h4 class="text-center">
+                  Git
+                </h4>
+                <img alt="The Git logo" src="images/git.png" class="center-block" />
+                <p>
+                  <a href="" target="_blank">
+                    Git
+                  </a>
+                  is a version control system used to save changes, discount changes, and much more.
+                </p>
+              </section>
             </section>
             <section id="bootstrap" class="col-xs-12">
               <h4>
