@@ -8,7 +8,7 @@
       Brandon Suen: Web Developer | Web Designer | Computer Programmer
     </title>
     <link rel="icon" type="image/jpg" href="images/basketball.jpg" />
-    <link href="hamburgers-master/dist/hamburgers.min.css" rel="stylesheet">
+    <link href="hamburgers-master/dist/hamburgers.min.css" rel="stylesheet" media="screen and (max-width: 767px)">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css?family=Lobster|Lobster+Two|Raleway:300|Satisfy|Teko" rel="stylesheet" />
     <style>
@@ -42,9 +42,6 @@
         font-family: 'Lobster', cursive;
       }
       h3 {
-        font-family: 'Lobster Two', cursive;
-      }
-      h4 {
         font-family: 'Teko', sans-serif;
       }
       p {
@@ -170,9 +167,9 @@
         <section class="row clearfix sameheight">
           <section id="html" class="col-sm-4 col-xs-6">
             <section class="card normal">
-              <h4 class="text-center">
+              <h3 class="text-center">
                 HTML
-              </h4>
+              </h3>
               <img alt="The HTML5 logo" src="images/html.png" class="img-responsive center-block logo" />
               <p>
                 <a href="" target="_blank">
@@ -184,22 +181,22 @@
           </section>
           <section id="css" class="col-sm-4 col-xs-6">
             <section class="card normal">
-              <h4 class="text-center">
+              <h3 class="text-center">
                 CSS
-              </h4>
+              </h3>
               <img alt="The CSS3 logo" src="images/css.png" class="img-responsive center-block logo" />
-              <h5>
+              <h4>
                 What is it?
-              </h5>
+              </h4>
               <p>
                 <a href="" target="_blank">
                   CSS
                 </a>
                  is a style sheet language used to style content on websites.
               </p>
-              <h5>
+              <h4>
                 Resources I Have Used
-              </h5>
+              </h4>
               <ul>
                 <li>
                   <a href="https://www.udacity.com/course/intro-to-html-and-css--ud304" target="_blank">
@@ -254,9 +251,9 @@
           </section>
           <section id="js" class="col-sm-4 col-xs-6">
             <section class="card normal">
-              <h4 class="text-center">
+              <h3 class="text-center">
                 Javascript
-              </h4>
+              </h3>
               <img alt="The Javascript logo" src="images/js.png" class="img-responsive center-block logo" />
               <p>
                 <a href="" target="_blank">
@@ -268,9 +265,9 @@
           </section>
           <section id="jquery" class="col-sm-4 col-xs-6">
             <section class="card normal responsive">
-              <h4 class="text-center">
+              <h3 class="text-center">
                 Jquery
-              </h4>
+              </h3>
               <img alt="The Jquery logo" src="images/jquery.png" class="center-block" />
               <p>
                 <a href="" target="_blank">
@@ -284,9 +281,9 @@
         <section class="row clearfix sameheight">
           <section id="rwd" class="col-sm-4 col-xs-6">
             <section class="card normal">
-              <h4 class="text-center">
+              <h3 class="text-center">
                 Responsive Web Design
-              </h4>
+              </h3>
               <div id="phone" class="hidden-xs">
                 <iframe src="https://brandons42.github.io/personal_website/"></iframe>
               </div>
@@ -302,9 +299,9 @@
           <section class="col-sm-8 col-xs-6">
             <section id="git" class="col-xs-12">
               <section class="card normal responsive">
-                <h4 class="text-center">
+                <h3 class="text-center">
                   Git
-                </h4>
+                </h3>
                 <img alt="The Git logo" src="images/git.png" class="center-block" />
                 <p>
                   <a href="" target="_blank">
@@ -315,9 +312,9 @@
               </section>
             </section>
             <section id="bootstrap" class="col-xs-12">
-              <h4>
+              <h3>
                 Bootstrap
-              </h4>
+              </h3>
               <img alt="The Bootstrap logo" src="images/bootstrap.svg" class="center-block logo" />
               <p>
                 <a href="" target="_blank">
@@ -358,7 +355,39 @@
       </footer>
     </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="main.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous" async></script>
+    <script>
+      $(document).ready(function() {
+      	$(".responsive").each(function() {
+      		if ($(this).width() > 602) {
+      			$(this).children("img").addClass("logo");
+      		} else {
+      			$(this).children("img").css("width", "80%");
+      		}
+      	});
+      	var arr;
+      	var max;
+      	$(".sameheight").each(function() {
+      		arr = [];
+      		$(this).find(".card").each(function() {
+      			arr.push($(this).height());
+      		});
+      		max = 20 + Math.max.apply(null, arr);
+      		$(this).find(".card").css("height", max + "px");
+      	});
+      	var id;
+      	var target;
+      	$("#nav a").click(function(){
+      		id = $(this).attr("href");
+      		console.log(id);
+      		console.log($(id).scrollTop());
+      		$("html, body").animate(
+      			{
+      				scrollTop: $(id).scrollTop()
+      			}, 2000);
+      	});
+      });
+    </script>
+    <script src="analytics.js" defer></script>
   </body>
 </html>
