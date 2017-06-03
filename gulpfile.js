@@ -58,7 +58,7 @@ gulp.task("copy-img", function() {
     .pipe(gulp.dest("dist/img"));
 });
 gulp.task("copy-libraries", function() {
-  gulp.src("hamburgers-master/dist/hamburgers.min.css")
+  gulp.src("hamburgers.min.css")
     .pipe(gulp.dest("dist/css"));
 });
 gulp.task("copy-analytics", function() {
