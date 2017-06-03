@@ -5,14 +5,14 @@ var autoprefixer = require("gulp-autoprefixer");
 var jasmine = require("gulp-jasmine-phantom");
 var concat = require("gulp-concat");
 var uglify = require("gulp-uglify");
-gulp.task("default", ["styles", "copy-html", "copy-img", "copy-libraries", "copy-analytics", "tests"], function() {
+gulp.task("default", ["dist", "copy-analytics", "tests"], function() {
+    browserSync.init({
+        server: "./dist"
+    });
     gulp.watch("sass/**/*.scss", ["sass"]);
     gulp.watch("./index.html", ["copy-html"]);
     gulp.watch("./img", ["copy-img"]);
     gulp.watch("./index.html").on("change", browserSync.reload);
-    browserSync.init({
-        server: "./dist"
-    });
 });
 gulp.task("dist", [
   "copy-html",
@@ -58,7 +58,7 @@ gulp.task("copy-img", function() {
     .pipe(gulp.dest("dist/img"));
 });
 gulp.task("copy-libraries", function() {
-  gulp.src("hamburgers.min.css")
+  gulp.src("hamburgers-master/dist/hamburgers.min.css")
     .pipe(gulp.dest("dist/css"));
 });
 gulp.task("copy-analytics", function() {
