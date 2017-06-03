@@ -25,13 +25,14 @@
         color: #fefeff;
       }
       #nav-content a {
+        color: #1e2749;
         border-radius: 0;
         -webkit-transition: background-color 1s, color 1s;
                 transition: background-color 1s, color 1s;
       }
       .inverted, #nav-content a:hover {
         background-color: #1e2749;
-        color: #fafaff;
+        color: #fefeff;
       }
       #nav {
         border: none;
@@ -44,7 +45,7 @@
       h3 {
         font-family: 'Teko', sans-serif;
       }
-      p {
+      p, li {
         font-family: 'Raleway', sans-serif;
       }
       #home > section {
@@ -58,6 +59,9 @@
         border-radius: 5px;
         box-shadow: 5px 5px 25px #30343f;
         margin: auto;
+      }
+      .invisible {
+        display: none;
       }
       #nav img {
         border: none;
@@ -171,12 +175,66 @@
                 HTML
               </h3>
               <img alt="The HTML5 logo" src="images/html.png" class="img-responsive center-block logo" />
+              <h4>
+                What is it?
+              </h4>
               <p>
-                <a href="" target="_blank">
+                <a href="https://www.w3.org/html/" target="_blank">
                   HTML
                 </a>
                  is a markup language used to structure content on websites.
               </p>
+              <h4>
+                Resources I Have Used
+              </h4>
+              <ul>
+                <li>
+                  <a href="https://www.udacity.com/course/intro-to-html-and-css--ud304" target="_blank">
+                    Intro to HTML and CSS
+                  </a>
+                   by Gundega Dekena, Cameron Pittman, and Jessica Uelmen on
+                  <a href="https://www.udacity.com/" target="_blank">
+                    Udacity
+                  </a>
+                </li>
+                <li>
+                  <a href="http://learn.shayhowe.com/" target="_blank">
+                    Learn to Code HTML &amp; CSS
+                  </a>
+                   by
+                  <a href="http://shayhowe.com/" target="_blank">
+                    Shay Howe
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.freecodecamp.com" target="_blank">
+                    freeCodeCamp
+                  </a>
+                </li>
+                <li>
+                  <a href="https://dash.generalassemb.ly/" target="_blank">
+                    General Assembly Dash
+                  </a>
+                </li>
+                <li>
+                  <a href="http://htmldog.com/guides/html/" target="_blank">
+                    HTML Dog
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.sololearn.com/Course/HTML/" target="_blank">
+                    SoloLearn
+                  </a>
+                </li>
+              </ul>
+              <h4>
+                Projects I Have Built
+              </h4>
+              <ul>
+                <li>
+
+                </li>
+              </ul>
             </section>
           </section>
           <section id="css" class="col-sm-4 col-xs-6">
@@ -189,7 +247,7 @@
                 What is it?
               </h4>
               <p>
-                <a href="" target="_blank">
+                <a href="https://www.w3.org/Style/CSS/Overview.en.html" target="_blank">
                   CSS
                 </a>
                  is a style sheet language used to style content on websites.
@@ -208,6 +266,15 @@
                   </a>
                 </li>
                 <li>
+                  <a href="http://learn.shayhowe.com/" target="_blank">
+                    Learn to Code HTML &amp; CSS
+                  </a>
+                   by
+                  <a href="http://shayhowe.com/" target="_blank">
+                    Shay Howe
+                  </a>
+                </li>
+                <li>
                   <a href="https://www.freecodecamp.com" target="_blank">
                     freeCodeCamp
                   </a>
@@ -216,12 +283,6 @@
                   <a href="http://learnlayout.com/" target="_blank">
                     Learn CSS Layout
                   </a>
-                </li>
-                <li>
-                  <a href="https://www.theodinproject.com/courses/html5-and-css3" target="_blank">
-                    The Odin Project
-                  </a>
-                  (Including all of the other resources used in the curriculum)
                 </li>
                 <li>
                   <a href="https://dash.generalassemb.ly/" target="_blank">
@@ -239,6 +300,16 @@
                    on
                   <a href="https://www.udemy.com/" target="_blank">
                     Udemy
+                  </a>
+                </li>
+                <li>
+                  <a href="http://htmldog.com/guides/css/" target="_blank">
+                    HTML Dog
+                  </a>
+                </li>
+                <li>
+                  <a href="https://css-tricks.com/" target="_blank">
+                    CSS-Tricks
                   </a>
                 </li>
                 <li>
@@ -277,8 +348,6 @@
               </p>
             </section>
           </section>
-        </section>
-        <section class="row clearfix sameheight">
           <section id="rwd" class="col-sm-4 col-xs-6">
             <section class="card normal">
               <h3 class="text-center">
@@ -287,7 +356,10 @@
               <div id="phone" class="hidden-xs">
                 <iframe src="https://brandons42.github.io/personal_website/"></iframe>
               </div>
-              <img alt="A desktop computer, tablet, and smartphone" src="images/rwd.png" class="center-block visible-xs-block logo" />
+              <img alt="A desktop computer, tablet, and smartphone" src="images/rwd.png" class="img-responsive center-block visible-xs-block logo" />
+              <h4>
+                What is it?
+              </h4>
               <p>
                 <a href="" target="_blank">
                   Responsive web design
@@ -296,32 +368,52 @@
               </p>
             </section>
           </section>
-          <section class="col-sm-8 col-xs-6">
-            <section id="git" class="col-xs-12">
-              <section class="card normal responsive">
+          <section id="git" class="col-sm-4 col-xs-6">
+            <section class="card normal responsive">
                 <h3 class="text-center">
                   Git
                 </h3>
                 <img alt="The Git logo" src="images/git.png" class="center-block" />
+                <h4>
+                  What is it?
+                </h4>
                 <p>
                   <a href="" target="_blank">
                     Git
                   </a>
-                  is a version control system used to save changes, discount changes, and much more.
+                  is a version control system used to save changes, remove changes, and much more.
                 </p>
-              </section>
             </section>
-            <section id="bootstrap" class="col-xs-12">
+          </section>
+          <section id="bootstrap" class="col-sm-4 col-xs-6">
+            <section class="card normal">
               <h3>
                 Bootstrap
               </h3>
-              <img alt="The Bootstrap logo" src="images/bootstrap.svg" class="center-block logo" />
+              <img alt="The Bootstrap logo" src="images/bootstrap.svg" class="img-responsive center-block logo" />
+              <h4>
+                What is it?
+              </h4>
               <p>
                 <a href="" target="_blank">
                   Bootstrap
                 </a>
                 is a CSS framework used to simplify various tasks.
               </p>
+              <h4>
+                Resources I Have Used
+              </h4>
+              <ul>
+                <li>
+                  <a href="https://www.udacity.com/course/intro-to-html-and-css--ud304" target="_blank">
+                    Intro to HTML and CSS
+                  </a>
+                   by Gundega Dekena, Cameron Pittman, and Jessica Uelmen on
+                  <a href="https://www.udacity.com/" target="_blank">
+                    Udacity
+                  </a>
+                </li>
+              </ul>
             </section>
           </section>
         </section>
@@ -355,35 +447,78 @@
       </footer>
     </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="jquery-color.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous" async></script>
     <script>
       $(document).ready(function() {
+        $("nav a").on('activate.bs.scrollspy', function () {
+          $(this).css("color", "#fefeff");
+        });
       	$(".responsive").each(function() {
-      		if ($(this).width() > 602) {
-      			$(this).children("img").addClass("logo");
+      		if ($(this).children("img").width() > $(this).width()) {
+            $(this).children("img").css("width", "80%");
       		} else {
-      			$(this).children("img").css("width", "80%");
+      			$(this).children("img").addClass("logo");
       		}
       	});
-      	var arr;
-      	var max;
+      	var arr, greatest, card;
       	$(".sameheight").each(function() {
       		arr = [];
-      		$(this).find(".card").each(function() {
+          card = $(this).find(".card");
+      		card.each(function() {
       			arr.push($(this).height());
       		});
-      		max = 20 + Math.max.apply(null, arr);
-      		$(this).find(".card").css("height", max + "px");
+      		greatest = 20 + Math.max.apply(null, arr);
+      		card.children().not("h3").addClass("invisible");
       	});
-      	var id;
-      	var target;
+        var smallest = $(".card").first().height();
+        var scroll, min, max, height;
+        $(window).scroll(function() {
+          scroll = $(window).scrollTop();
+          if (scroll < $("#home").height() && $("nav").hasClass("inverted")) {
+            $("nav").animate({
+              backgroundColor: "#fefeff";
+              color: "#1e2749";
+            }, function() {
+              $("nav").toggleClass("normal inverted");
+            });
+          } else if (scroll < $("#home").height() + $("#skillset").height()) {
+            if ($("nav").hasClass("normal")) {
+              $("nav").animate({
+                backgroundColor: "#1e2749";
+                color: "#fefeff";
+              }, function() {
+                $("nav").toggleClass("normal inverted");
+              });
+            }
+            height = $(window).height();
+            min = scroll + height * .2;
+            max = scroll + height * .7;
+            $(".card").each(function(){
+              if (min < $(this).offset().top && max > $(this).offset().top) {
+                if ($(this).children().last().hasClass("invisible")) {
+                  $(this).animate({
+                    height: greatest
+                  }, function() {
+                    $(this).children().not("h3").removeClass("invisible");
+                  });
+                }
+              } else if (!$(this).children().last().hasClass("invisible")) {
+                $(this).animate({
+                  height: smallest
+                }, function() {
+                  $(this).children().not("h3").addClass("invisible");
+                });
+              }
+            });
+          }
+        });
+      	var id, target;
       	$("#nav a").click(function(){
       		id = $(this).attr("href");
-      		console.log(id);
-      		console.log($(id).scrollTop());
-      		$("html, body").animate(
+      		$(window).animate(
       			{
-      				scrollTop: $(id).scrollTop()
+      				scrollTop: $(id).offset().top
       			}, 2000);
       	});
       });
