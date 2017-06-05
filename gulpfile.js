@@ -5,6 +5,7 @@ var autoprefixer = require("gulp-autoprefixer");
 var jasmine = require("gulp-jasmine-phantom");
 var concat = require("gulp-concat");
 var uglify = require("gulp-uglify");
+var ghPages = require("gulp-gh-pages");
 gulp.task("default", ["dist", "copy-analytics", "tests"], function() {
     browserSync.init({
         server: "./dist"
@@ -32,15 +33,15 @@ gulp.task("scripts-dist", function() {
     .pipe(gulp.dest("dist/js"));
 });
 gulp.task("styles", function() {
-    return gulp.src("sass/**/*.scss")
-        .pipe(sass({
-          outputStyle: "compressed"
-        }).on("error", sass.logError))
-        .pipe(autoprefixer({
-          browsers: ["last 2 versions"]
-        }))
-        .pipe(gulp.dest("dist/css"))
-        .pipe(browserSync.stream());
+    gulp.src("sass/**/*.scss")
+      .pipe(sass({
+        outputStyle: "compressed"
+      }).on("error", sass.logError))
+      .pipe(autoprefixer({
+        browsers: ["last 2 versions"]
+      }))
+      .pipe(gulp.dest("dist/css"))
+      .pipe(browserSync.stream());
 });
 gulp.task("tests", function() {
   gulp.src("spec/spec.js")
@@ -64,4 +65,8 @@ gulp.task("copy-libraries", function() {
 gulp.task("copy-analytics", function() {
   gulp.src("./analytics.js")
     .pipe(gulp.dest("dist/js"));
+});
+gulp.task('deploy', function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
 });
