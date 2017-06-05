@@ -6,6 +6,7 @@ var jasmine = require("gulp-jasmine-phantom");
 var concat = require("gulp-concat");
 var uglify = require("gulp-uglify");
 var ghPages = require("gulp-gh-pages");
+var inlinesource = require('gulp-inline-source');
 gulp.task("default", ["dist", "copy-analytics", "tests"], function() {
     browserSync.init({
         server: "./dist"
@@ -16,10 +17,10 @@ gulp.task("default", ["dist", "copy-analytics", "tests"], function() {
     gulp.watch("./index.html").on("change", browserSync.reload);
 });
 gulp.task("dist", [
-  "copy-html",
   "copy-img",
   "styles",
-  "scripts-dist"
+  "scripts-dist",
+  "copy-html"
 ]);
 gulp.task("scripts", function() {
   gulp.src("js/**/*.js")
@@ -28,7 +29,7 @@ gulp.task("scripts", function() {
 });
 gulp.task("scripts-dist", function() {
   gulp.src("js/**/*.js")
-    .pipe(concat("concat.js"))
+    //.pipe(concat("concat.js"))
     .pipe(uglify())
     .pipe(gulp.dest("dist/js"));
 });
@@ -53,6 +54,8 @@ gulp.task("tests", function() {
 gulp.task("copy-html", function() {
   gulp.src("./index.html")
     .pipe(gulp.dest("./dist"));
+  gulp.src("dist/index.html")
+    .pipe(inlinesource());
 });
 gulp.task("copy-img", function() {
   gulp.src("img/*")

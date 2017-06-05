@@ -1,0 +1,85 @@
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+.normal {
+  background-color: #fefeff;
+  color: #1e2749;
+}
+#home div {
+  color: #fefeff;
+}
+#nav-content a {
+  color: #1e2749;
+  border-radius: 0;
+  -webkit-transition: background-color 1s, color 1s;
+          transition: background-color 1s, color 1s;
+}
+.inverted, #nav-content a:hover {
+  background-color: #1e2749;
+  color: #fefeff;
+}
+#nav {
+  border: none;
+  overflow: hidden;
+  font-family: 'Raleway', sans-serif;
+}
+h2 {
+  font-family: 'Lobster', cursive;
+}
+h3 {
+  font-family: 'Teko', sans-serif;
+}
+p, li {
+  font-family: 'Raleway', sans-serif;
+}
+#home > section {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("img/background.jpg");
+  background-size: cover;
+}
+.card {
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 5px 5px 25px #30343f;
+  margin: auto;
+}
+.invisible {
+  display: none;
+}
+#nav img {
+  border: none;
+  -webkit-transition: border 1s;
+          transition: border 1s;
+}
+#home div {
+  margin-left: 5%;
+}
+#home h1 {
+  display: inline;
+  font-family: 'Satisfy', cursive;
+}
+#home img {
+  display: inline-block;
+}
+#home p {
+  font-family: 'Teko', sans-serif;
+}
+#home a {
+  position: relative;
+  color: #fefeff;
+  animation-name: bounce;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  -webkit-transition: font-size 1s, color 1s, left 1s;
+          transition: font-size 1s, color 1s, left 1s;
+}
+#home a:hover {
+  color: #1e2749;
+}
+#phone {
+  background-color: black;
+  border-radius: 5px;
+}
