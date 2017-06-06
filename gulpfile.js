@@ -7,6 +7,7 @@ var concat = require("gulp-concat");
 var uglify = require("gulp-uglify");
 var ghPages = require("gulp-gh-pages");
 var inlinesource = require('gulp-inline-source');
+var webpack = require('webpack-stream');
 gulp.task("default", ["dist", "copy-analytics", "tests"], function() {
     browserSync.init({
         server: "./dist"
@@ -19,15 +20,10 @@ gulp.task("default", ["dist", "copy-analytics", "tests"], function() {
 gulp.task("dist", [
   "copy-img",
   "styles",
-  "scripts-dist",
+  "scripts",
   "copy-html"
 ]);
 gulp.task("scripts", function() {
-  gulp.src("js/**/*.js")
-    .pipe(concat("concat.js"))
-    .pipe(gulp.dest("dist/js"));
-});
-gulp.task("scripts-dist", function() {
   gulp.src("js/**/!(inline).js")
     .pipe(concat("concat.js"))
     .pipe(uglify())
