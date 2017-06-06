@@ -1,0 +1,33 @@
+{
+  "name": "personal_website",
+  "version": "1.0.0",
+  "description": "My personal website",
+  "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp-webpack": "^1.5.0",
+    "browser-sync": "^2.18.12",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-inline-source": "^3.1.0",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-jasmine-phantom": "^3.0.0",
+    "phantomjs": "^2.1.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brandons42/personal_website.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/Brandons42/personal_website/issues"
+  },
+  "homepage": "https://github.com/Brandons42/personal_website#readme"
+}

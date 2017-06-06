@@ -28,8 +28,11 @@ gulp.task("scripts", function() {
     .pipe(gulp.dest("dist/js"));
 });
 gulp.task("scripts-dist", function() {
-  gulp.src("js/**/*.js")
-    //.pipe(concat("concat.js"))
+  gulp.src("js/**/!(inline).js")
+    .pipe(concat("concat.js"))
+    .pipe(uglify())
+    .pipe(gulp.dest("dist/js"));
+  gulp.src("js/inline.js")
     .pipe(uglify())
     .pipe(gulp.dest("dist/js"));
 });
@@ -60,10 +63,6 @@ gulp.task("copy-html", function() {
 gulp.task("copy-img", function() {
   gulp.src("img/*")
     .pipe(gulp.dest("dist/img"));
-});
-gulp.task("copy-libraries", function() {
-  gulp.src("hamburgers-master/dist/hamburgers.min.css")
-    .pipe(gulp.dest("dist/css"));
 });
 gulp.task("copy-analytics", function() {
   gulp.src("./analytics.js")
