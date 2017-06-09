@@ -7,9 +7,6 @@ html, body {
   background-color: #fefeff;
   color: #1e2749;
 }
-#home div {
-  color: #fefeff;
-}
 #nav-content a {
   color: #1e2749;
   border-radius: 0;
@@ -37,7 +34,7 @@ p, li {
 #home > section {
   height: 100vh;
   width: 100vw;
-  background-image: url("img/background.jpg");
+  background-image: url("../img/background.jpg");
   background-size: cover;
 }
 .card {
@@ -54,30 +51,33 @@ p, li {
   -webkit-transition: border 1s;
           transition: border 1s;
 }
-#home div {
-  margin-left: 5%;
-}
-#home h1 {
-  display: inline;
-  font-family: 'Satisfy', cursive;
-}
-#home img {
-  display: inline-block;
-}
-#home p {
-  font-family: 'Teko', sans-serif;
-}
-#home a {
-  position: relative;
-  color: #fefeff;
-  animation-name: bounce;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  -webkit-transition: font-size 1s, color 1s, left 1s;
-          transition: font-size 1s, color 1s, left 1s;
-}
-#home a:hover {
-  color: #1e2749;
+#home {
+  div {
+    margin-left: 5%;
+    color: #fefeff;
+  }
+  h1 {
+    display: inline;
+    font-family: 'Satisfy', cursive;
+  }
+  img {
+    display: inline-block;
+  }
+  p {
+    font-family: 'Teko', sans-serif;
+  }
+  a {
+    position: relative;
+    color: #fefeff;
+    animation-name: bounce;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    -webkit-transition: font-size 1s, color 1s, left 1s;
+            transition: font-size 1s, color 1s, left 1s;
+  }
+  a:hover {
+    color: #1e2749;
+  }
 }
 #phone {
   background-color: black;
