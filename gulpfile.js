@@ -16,7 +16,7 @@ gulp.task("default", ["dist", "copy-analytics", "tests"], function() {
     browserSync.init({
         server: "./dist"
     });
-    gulp.watch("sass/**/*.scss", ["sass"]);
+    gulp.watch("sass/**/*.scss", ["styles"]);
     gulp.watch("./index.html", ["copy-html"]);
     gulp.watch("./img", ["copy-img"]);
     gulp.watch("./index.html").on("change", browserSync.reload);

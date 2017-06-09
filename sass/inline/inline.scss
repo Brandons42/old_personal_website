@@ -10,8 +10,7 @@ html, body {
 #nav-content a {
   color: #1e2749;
   border-radius: 0;
-  -webkit-transition: background-color 1s, color 1s;
-          transition: background-color 1s, color 1s;
+  transition: background-color 1s, color 1s;
 }
 .inverted, #nav-content a:hover {
   background-color: #1e2749;
@@ -34,7 +33,7 @@ p, li {
 #home > section {
   height: 100vh;
   width: 100vw;
-  background-image: url("../img/background.jpg");
+  background-image: url("../../img/background.jpg");
   background-size: cover;
 }
 .card {
@@ -48,8 +47,7 @@ p, li {
 }
 #nav img {
   border: none;
-  -webkit-transition: border 1s;
-          transition: border 1s;
+  transition: border 1s;
 }
 #home {
   div {
@@ -72,8 +70,7 @@ p, li {
     animation-name: bounce;
     animation-duration: 3s;
     animation-iteration-count: infinite;
-    -webkit-transition: font-size 1s, color 1s, left 1s;
-            transition: font-size 1s, color 1s, left 1s;
+    transition: font-size 1s, color 1s, left 1s;
   }
   a:hover {
     color: #1e2749;
