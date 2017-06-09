@@ -71,8 +71,7 @@ gulp.task("tests", function() {
 });
 gulp.task("copy-html", function() {
   gulp.src("./index.html")
-    .pipe(gulp.dest("./dist"));
-  gulp.src("dist/index.html")
+    .pipe(gulp.dest("./dist"))
     .pipe(inline({
       base: "./",
       disabledTypes: ["img", "svg", "js"],
