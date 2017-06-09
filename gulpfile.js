@@ -78,7 +78,9 @@ gulp.task("copy-html", function() {
       disabledTypes: ["img", "svg", "js"],
       ignore: ""
     }))
-    .pipe(htmlmin())
+    .pipe(htmlmin({
+      collapseWhitespace: true
+    }))
     .pipe(gulp.dest("./dist"));
 });
 gulp.task("copy-img", function() {
