@@ -1,3 +1,6 @@
+import $ from "./jquery/jquery.js";
+import "./jquery/jquery-color.min.js";
+import "./analytics.js";
 $(document).ready(function() {
   $("nav a").on('activate.bs.scrollspy', function () {
     $(this).css("color", "#fefeff");
@@ -9,7 +12,7 @@ $(document).ready(function() {
       $(this).children("img").addClass("logo");
     }
   });
-  var arr, greatest, card;
+  let arr, greatest, card;
   $(".sameheight").each(function() {
     arr = [];
     card = $(this).find(".card");
@@ -19,8 +22,8 @@ $(document).ready(function() {
     greatest = 20 + Math.max.apply(null, arr);
     card.children().not("h3").addClass("invisible");
   });
-  var smallest = $(".card").first().height();
-  var scroll, min, max, height;
+  const smallest = $(".card").first().height();
+  let scroll, min, max, height;
   $(window).scroll(function() {
     scroll = $(window).scrollTop();
     if (scroll < $("#home").height() && $("nav").hasClass("inverted")) {
@@ -61,7 +64,7 @@ $(document).ready(function() {
       });
     }
   });
-  var id, target;
+  let id, target;
   $("#nav a").click(function(){
     id = $(this).attr("href");
     $(window).animate(
