@@ -1,6 +1,6 @@
-import $ from "./jquery/jquery.js";
-import "./jquery/jquery-color.min.js";
 import "./analytics.js";
+import $ from "jquery";
+import "./jquery-color.js";
 $(document).ready(function() {
   $("nav a").on('activate.bs.scrollspy', function () {
     $(this).css("color", "#fefeff");
